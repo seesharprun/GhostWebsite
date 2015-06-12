@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en" class="no-js"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en" class="no-js"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en" class="no-js"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+
+<html>
+<head>
+
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="author" content="{{meta_title}}">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Styles'n'Scripts }}
+    
+    <!-- CSS -->
+    <link href="/assets/css/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="/assets/css/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+        
+    <!-- HighlightJs -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/styles/googlecode.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+
+</head>
+<body data-spy="scroll" data-target="#main-nav" class="{{body_class}}">
+
+	{{! Everything else gets inserted here }}
+	
+    <!-- WRAPPER -->
+	<div class="wrapper">
+				
+		<!-- main navigation -->
+		<nav class="navbar navbar-default navbar-fixed-top" id="main-nav" role="navigation">
+			<div class="container">
+
+				<!-- brand and toggle -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-nav-collapse">
+						<span class="sr-only">Toggle Navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>     
+                    <a class="navbar-brand" href="{{@blog.url}}">       
+                        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="SeeSharpRun.NET" /></a>{{/if}}                 
+                    </a>					
+				</div>
+
+				<!-- navigation links -->
+				<div class="collapse navbar-collapse main-nav-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="{{@blog.url}}">HOME</a></li>
+						<li><a href="{{@blog.url}}/events">EVENTS</a></li>
+                        <li class="dropdown">
+                            <a href="{{@blog.url}}/sidney" class="dropdown-toggle" data-toggle="dropdown">SIDNEY <span class="glyphicon glyphicon-chevron-down"></span></a>
+                            <ul class="dropdown-menu">
+						        <li><a href="{{@blog.url}}/sidney#about">BIO</a></li>
+						        <li><a href="{{@blog.url}}/sidney#resume">RESUME</a></li>
+						        <li><a href="{{@blog.url}}/sidney#contact">CONTACT</a></li>
+                            </ul>
+                        </li>
+						<li><a href="{{@blog.url}}/company">ABOUT</a></li>
+					</ul>
+				</div>
+                
+			</div>
+		</nav>
+		<!-- end main navigation -->
+        
+        {{{body}}}
+
+    </div>
+    <!-- END WRAPPER -->
+
+    <!-- footer -->
+	<footer class="footer">
+		<p>
+            <a href="{{@blog.url}}/rss/"><span class="glyphicon glyphicon-plane"></span> Subscribe</a> • 
+            All content copyright • 
+            <a href="{{@blog.url}}">SeeSharpRun.NET</a> © 2014 • 
+            All Rights Reserved.
+        </p>
+	</footer>
+    <!-- end footer -->
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Boo }}
+    <!-- Javascript -->
+    <script type="text/javascript" src="/assets/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/modernizr.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.ui.map.full.min.js?ver=3.0"></script>
+    <script type="text/javascript" src="/assets/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.localscroll-1.2.7-min.js"></script>	
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+
+    <!-- HighlightJs -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>  
+    <script>hljs.initHighlightingOnLoad();</script> 
+     
+</body>
+</html>

@@ -1,0 +1,41 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into the {body} of the default.hbs template, which contains our header/footer. }}
+  
+{{! The big featured header on the homepage, with the site logo and description }}
+
+{{! The main content area on the homepage }}
+
+{{> header}}
+
+<a href="https://plus.google.com/105525102923228057689" rel="publisher">Google+</a>
+
+<main class="content" role="main">
+
+	{{! Each post will be output using this markup }}
+    
+    <section id="blog" class="posts">
+
+        {{#foreach posts}}
+        
+            {{> post-item}}
+
+        {{/foreach}}
+        
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        {{!! After all the posts, we have the previous/next pagination links }}
+
+                        {{pagination}}
+
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+</main>
